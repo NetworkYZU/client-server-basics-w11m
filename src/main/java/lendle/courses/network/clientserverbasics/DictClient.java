@@ -38,6 +38,7 @@ public class DictClient {
         //hint: 從socket 取得 InputStream
         InputStream in = socket.getInputStream();
         ////////////////////////////////
+        ///BufferedReader 將output根據換行符號讀入
         BufferedReader reader = new BufferedReader(
                 new InputStreamReader(in, "UTF-8"));
         for (String line = reader.readLine(); !line.equals("."); line = reader.readLine()) {
